@@ -1,0 +1,765 @@
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip; 
+        overflow-x: hidden; 
+        background-color: #212529;
+        position: relative;
+        overscroll-behavior-x: none; /* Evita el efecto de rebote horizontal */
+      }
+
+
+      body {
+        padding-top: 66px;
+        position: relative;
+        overflow-y: scroll; /* Forzamos scroll vertical para que no haya saltos al aparecer */
+      }
+
+      * {
+        box-sizing: border-box !important;
+      }
+
+      /* Prohibir desbordamiento en contenedores principales */
+      main, .container, .container-fluid, .album, header, footer {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+
+
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Fix para que todas las imágenes tengan el mismo tamaño */
+      .card-img-top {
+        width: 100%;
+        height: 225px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      @media (max-width: 576px) {
+        .row {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+        .container, .container-fluid {
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+        }
+      }
+      /* Fix para que las tarjetas tengan altura fija */
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 250px; /* Altura fija para el cuerpo de la tarjeta */
+      }
+
+      .card-text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limita a 3 líneas de texto */
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section {
+        /* Gradiente que termina exactamente en el color sólido #212529 */
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, #212529 100%), url('/images/josetattoo.png');
+        background-size: cover;
+        background-position: center 20%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-color: #212529;
+        
+        min-height: 70vh;
+        width: 100%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-top: 80px !important;
+        padding-bottom: 60px !important;
+        color: white !important;
+        image-rendering: high-quality;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Nuevo Efecto de Reflejo (Sin Unión Visible) */
+      .hero-reflection {
+        height: 300px; /* Un poco más alto para ver el reflejo completo */
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color: #212529;
+        margin-top: -3px; 
+        border: none;
+        outline: none;
+      }
+
+      .hero-reflection::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/images/josetattoo.png');
+        background-size: cover;
+        background-position: center 95%; /* Ajustado para mostrar la parte inferior de la imagen (lo de abajo) */
+        transform: scaleY(-1);
+        filter: blur(2px) brightness(0.6); 
+        opacity: 0.8;
+      }
+
+      /* Gradiente de fusión que deja ver mejor "lo de abajo" */
+      .hero-reflection::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, 
+          #212529 0%, 
+          rgba(33, 37, 41, 0.1) 30%, /* Más transparente en el centro para ver bien el reflejo */
+          rgba(33, 37, 41, 0.1) 70%, 
+          #212529 100%);
+      }
+
+
+
+
+
+
+
+
+      .hero-section .row {
+        z-index: 2; /* Para que los botones queden por encima del gradiente */
+        width: 100%;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+      }
+
+
+      @media (max-width: 768px) {
+        .hero-section {
+          min-height: auto !important;
+          aspect-ratio: 16 / 9;
+          padding-top: 60px !important;
+          padding-bottom: 40px !important;
+          background-size: cover !important; /* Revertido a cover como pediste */
+          background-position: center 25% !important;
+        }
+
+        .hero-reflection {
+          height: 200px;
+          margin-top: -3px;
+        }
+
+        .hero-reflection::before {
+          background-size: cover !important; /* Sincronizado con el hero arriba */
+          background-position: center 25% !important; /* Misma posición para simetría */
+          filter: blur(2px) brightness(0.5);
+          opacity: 0.9;
+          transform: scaleY(-1);
+        }
+
+        .hero-reflection::after {
+          background: linear-gradient(to bottom, 
+            #212529 0%, 
+            rgba(33, 37, 41, 0.2) 35%, 
+            rgba(33, 37, 41, 0.2) 75%, 
+            #212529 100%) !important;
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+      main {
+        background-color: #f8f9fa;
+        overflow-x: hidden; /* Segunda capa de seguridad */
+      }
+
+      .hero-section .row {
+        /* Eliminamos width 100% para evitar conflicto con márgenes negativos */
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+
+      /* Botones Hero Personalizados */
+      .btn-hero-gold {
+        background-color: #212529 !important;
+        color: #ffc107 !important;
+        border: 2px solid #ffc107 !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .btn-hero-gold:hover {
+        background-color: #ffc107 !important;
+        color: #212529 !important;
+        border-color: #ffc107 !important;
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(255, 193, 7, 0.5);
+      }
+
+      .btn-hero-whatsapp {
+        background-color: transparent !important;
+        color: #fff !important;
+        border: 2px solid #fff !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+      }
+
+      .btn-hero-whatsapp:hover {
+        background-color: #25d366 !important;
+        border-color: #25d366 !important;
+        color: #fff !important;
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      }
+
+
+      .hero-section h1 {
+        font-weight: 500 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      }
+
+      .hero-section .text-muted {
+        color: rgba(255, 255, 255, 0.9) !important;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      }
+
+      /* Estilos para la Caja de Promoción */
+
+
+      /* Estilos para la Caja de Promoción */
+      .promo-box {
+        animation: subtleScale 2s infinite ease-in-out;
+        transition: all 0.3s ease;
+      }
+
+      .promo-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+      }
+
+      @keyframes subtleScale {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+      }
+
+      /* Side Promo Cards in Hero */
+      .side-promo-card {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        border-left: 3px solid #ffc107;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        padding: 12px;
+        border-radius: 8px;
+        width: 180px;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 10;
+        animation: floatingPromo 3s infinite ease-in-out;
+        color: white;
+        border: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .promo-left { left: 30px; }
+      .promo-right { right: 30px; }
+
+      .promo-top { top: 35%; }
+      .promo-bottom { top: 60%; }
+
+      .side-promo-card h6 {
+        color: #ffc107;
+        font-weight: bold;
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+      }
+
+      .side-promo-card p {
+        font-size: 0.75rem;
+        margin-bottom: 0;
+      }
+
+      @keyframes floatingPromo {
+        0%, 100% { transform: translateY(-50%) translateX(0); }
+        50% { transform: translateY(-55%) translateX(5px); }
+      }
+
+      /* Estilos para el Formulario de Cita (Premium) */
+      .form-container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border: 1px solid #eee;
+      }
+
+      .form-title-wrapper {
+        text-align: center;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+
+      .form-title {
+        color: #212529;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 3px solid #212529; /* Subrayado oscuro para combinar con botones */
+        display: inline-block;
+        padding-bottom: 8px;
+        margin-bottom: 0;
+      }
+
+      .input-group-text {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        color: #212529;
+        font-weight: 700;
+        border-radius: 4px 0 0 4px !important; /* Consistente con 4px */
+      }
+
+
+      .form-label {
+        font-weight: 600;
+        color: #444;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .form-control, .form-select {
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        border-radius: 4px; /* Consistente con botones de cards */
+        transition: all 0.3s ease;
+        background-color: #fff;
+        color: #212529;
+      }
+
+      .form-control:focus, .form-select:focus {
+        border-color: #212529 !important;
+        box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.1) !important;
+        outline: none;
+      }
+
+
+      /* Estilo consistente para el select */
+      .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        background-size: 16px 12px;
+      }
+
+
+
+      /* Botón de envío con estilo de Card Button */
+      .btn-submit-gold {
+        background-color: #fff !important;
+        color: #212529 !important;
+        border: 1px solid #dee2e6 !important;
+        padding: 12px !important;
+        font-weight: 600 !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px !important; /* Consistente con btn-detail */
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        width: 100%;
+        display: block;
+      }
+
+      .btn-submit-gold:hover {
+        background-color: #212529 !important;
+        color: #fff !important;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-color: #212529 !important;
+      }
+
+      .btn-back-link {
+        color: #6c757d !important;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        text-align: center;
+        margin-top: 15px;
+        display: block;
+      }
+
+      .btn-back-link:hover {
+        color: #212529 !important;
+        transform: translateX(-5px);
+      }
+
+      @media (max-width: 992px) {
+        .side-promo-card { display: none; }
+      }
+
+
+      /* Ayudante Flotante de WhatsApp */
+      .floating-helper {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        z-index: 2000;
+        width: 280px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border: 1px solid #25d366;
+        animation: slideInUp 0.6s ease-out;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+      }
+
+      .floating-helper.hidden {
+        transform: translateY(120px);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .floating-helper p {
+        font-size: 0.9rem;
+        color: #333;
+        margin-bottom: 12px;
+        line-height: 1.3;
+      }
+
+      .btn-whatsapp-float {
+        background-color: #212529;
+        color: #25d366;
+        border: 1px solid #25d366;
+        border-radius: 10px;
+        padding: 12px 15px; /* Más espacio para el texto */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px; /* Reducido para evitar desbordamiento */
+        width: 100%;
+        max-width: 100%; /* Safety */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        white-space: normal; /* Permitir salto de línea si es necesario */
+        text-align: center;
+        text-decoration: none;
+        line-height: 1.2;
+      }
+
+
+      .btn-whatsapp-float:hover {
+        background-color: #25d366;
+        color: white;
+        transform: scale(1.03);
+      }
+
+      /* Pantallas Móviles: Barra Sticky Inferior */
+      @media (max-width: 576px) {
+        .floating-helper {
+          right: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          max-width: none;
+          border-radius: 0;
+          padding: 8px 15px;
+          border: none;
+          border-top: 2px solid #25d366;
+          box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+          background-color: #212529; /* Fondo oscuro para que sea una línea elegante */
+        }
+
+        .floating-helper p {
+          display: none; /* Ocultamos el texto largo en móvil */
+        }
+
+        .btn-whatsapp-float {
+          border-radius: 6px;
+          padding: 10px;
+          font-size: 0.95rem; /* Un poco más grande para legibilidad */
+          background-color: #25d366 !important;
+          color: #fff !important;
+          border: none;
+          width: 100%;
+        }
+      }
+
+
+
+
+      /* Custom Burger Menu Animation */
+      .burger-menu {
+        border: none !important;
+        padding: 10px;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+
+      .burger-box {
+        display: block;
+        width: 24px;
+        height: 18px;
+        position: relative;
+      }
+
+      .burger-inner {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 2px;
+        position: absolute;
+        transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      }
+
+      .burger-inner:nth-child(1) { top: 0; }
+      .burger-inner:nth-child(2) { top: 50%; transform: translateY(-50%); }
+      .burger-inner:nth-child(3) { bottom: 0; }
+
+      /* Animación a X cuando está abierto */
+      .burger-menu[aria-expanded="true"] .burger-inner:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      .burger-menu[aria-expanded="true"] .burger-inner:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      .burger-menu[aria-expanded="true"] .burger-inner:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+      }
+
+      /* Estilos para los links del Footer */
+      .footer-link {
+        color: #212529 !important;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        padding: 2px 6px;
+        border-radius: 4px;
+        display: inline-block;
+      }
+
+      .footer-link:hover {
+        background-color: #212529;
+        color: #fff !important;
+        transform: translateY(-2px);
+      }
+
+      /* Animación para el link de la agencia (Estilo alineado a botones de cards) */
+      .agency-link {
+        color: #fff !important;
+        background-color: #212529;
+        border: 1px solid #212529;
+        padding: 6px 14px;
+        border-radius: 4px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-decoration: none !important;
+        display: inline-flex; /* Cambiado a inline-flex para mejor centrado */
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+        margin: 10px 0; /* Espacio extra para que al crecer no se corte */
+      }
+
+      
+      .agency-link:hover {
+        background-color: #ffc107 !important;
+        color: #212529 !important;
+        transform: translateY(-3px) scale(1.05); /* Efecto más contenido para evitar cortes */
+        box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4), 0 10px 20px rgba(0,0,0,0.2);
+        border-color: #ffc107 !important;
+      }
+
+
+
+      /* Botones de Card y Efecto Zoom */
+      .btn-detail {
+        background-color: #fff !important;
+        color: #212529 !important;
+        border: 1px solid #dee2e6 !important;
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem !important;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        border-radius: 4px !important;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+      }
+
+      .btn-detail:hover {
+        background-color: #212529 !important;
+        color: #fff !important;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        border-color: #212529 !important;
+      }
+
+      .card {
+        /* Eliminamos overflow: hidden para permitir que la imagen sobresalga */
+        transition: transform 0.3s ease;
+        z-index: 1;
+        position: relative;
+      }
+
+      .card-img-top {
+        transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transform-origin: center center;
+      }
+
+      /* Estado de Zoom controlado por JS */
+      .card-img-top.zoomed {
+        transform: scale(1.6); 
+        z-index: 1001; 
+        box-shadow: 0 15px 45px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        pointer-events: none; /* Para que al crecer no interfiera con el mouse de los botones */
+      }
+
+      .card.active-zoom {
+        z-index: 1000;
+      }
+
+      /* Barra de Promociones Movible (Marquee) */
+      .marquee-bar {
+        background: linear-gradient(90deg, #1a1a1a 0%, #333 50%, #1a1a1a 100%);
+        color: #ffc107;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 12px 0;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.85rem;
+        border-bottom: 1px solid #ffc107;
+        position: relative;
+        z-index: 100;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      }
+
+
+      .marquee-content {
+        display: inline-block;
+        animation: marquee 40s linear infinite;
+      }
+
+      .marquee-content span {
+        display: inline-block;
+        padding-right: 100px;
+        text-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+      }
+
+
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+
+      /* Hover para pausar si el usuario quiere leer */
+      .marquee-bar:hover .marquee-content {
+        animation-play-state: paused;
+      }
