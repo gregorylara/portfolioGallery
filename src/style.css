@@ -881,37 +881,6 @@
   border: none !important;
 }
 
-/* Badge flotante de urgencia / disponibilidad */
-.badge-live-agenda {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(0, 180, 0, 0.12);
-  border: 1px solid rgba(0, 180, 0, 0.45);
-  color: #00ff66;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.badge-live-agenda .live-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #00ff66;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #00ff66;
-  animation: liveBlink 1.5s infinite;
-}
-
-@keyframes liveBlink {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.3; transform: scale(0.8); }
-}
-
 /* ====================================================================
  * MEJORAS EN TARJETAS DE GALERÍA Y CTAs
  * ==================================================================== */
