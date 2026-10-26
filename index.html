@@ -70,33 +70,38 @@
   <section class="py-5 text-center container-fluid hero-section position-relative">
 
     <!-- Promo Izquierda -->
-    <div class="side-promo-card promo-left promo-top">
+    <div class="side-promo-card promo-left promo-top reveal-left">
       <h6>Flash Day</h6>
       <p>Diseños seleccionados desde 30€ cada sábado.</p>
     </div>
-    <div class="side-promo-card promo-left promo-bottom">
+    <div class="side-promo-card promo-left promo-bottom reveal-left delay-100">
       <h6>Cover Ups</h6>
       <p>Especialista en tapar tatuajes antiguos.</p>
     </div>
 
     <!-- Promo Derecha -->
-    <div class="side-promo-card promo-right promo-top">
+    <div class="side-promo-card promo-right promo-top reveal-right">
       <h6>Recomienda y Gana</h6>
       <p>Se incluye un 20% de descuento en tu próximo tatuaje por cada amigo que recomiendas.</p>
     </div>
-    <div class="side-promo-card promo-right promo-bottom">
+    <div class="side-promo-card promo-right promo-bottom reveal-right delay-100">
       <h6>Post-Tattoo</h6>
       <p>Kit de curación gratis en piezas &gt; 100€.</p>
     </div>
 
     <div class="row">
-      <div class="col-12 d-flex justify-content-center gap-3">
-        <a href="reservarCita.html" class="btn btn-hero-gold px-4 py-2 text-nowrap">
-          <i class="bi bi-calendar-event me-2"></i>Reservar Cita
-        </a>
-        <a href="https://wa.me/13179125909" target="_blank" class="btn btn-hero-whatsapp px-4 py-2 text-nowrap">
-          <i class="bi bi-whatsapp me-2"></i>Whatsapp
-        </a>
+      <div class="col-12 d-flex flex-column align-items-center">
+        <span class="badge-live-agenda reveal delay-100">
+          <span class="live-dot"></span> Agenda Abierta · Burgos &amp; Domicilios
+        </span>
+        <div class="d-flex justify-content-center gap-3 flex-wrap reveal delay-200">
+          <a href="reservarCita.html" class="btn btn-hero-gold px-4 py-2 text-nowrap btn-pulse">
+            <i class="bi bi-calendar-event me-2"></i>Reservar Cita
+          </a>
+          <a href="https://wa.me/13179125909?text=Hola%20Gregorio%2C%20quiero%20consultar%20por%20un%20tatuaje" target="_blank" class="btn btn-hero-whatsapp px-4 py-2 text-nowrap">
+            <i class="bi bi-whatsapp me-2"></i>WhatsApp Directo
+          </a>
+        </div>
       </div>
     </div>
 
@@ -104,7 +109,7 @@
   <div class="hero-reflection container-fluid"></div>
 
 
-  <section class="py-5 bg-dark text-light shadow-sm rounded-3 my-4 container">
+  <section class="py-5 bg-dark text-light shadow-sm rounded-3 my-4 container reveal">
     <div class="row justify-content-center">
       <!-- Contenido Central -->
       <div class="col-lg-10 text-center">
@@ -112,7 +117,7 @@
         <p class="lead text-muted">Arte en la piel, historias eternas. Especialista en Realismo, Tradicional y Neotradicional. Ubicado en Burgos, España, ofreciendo un trabajo profesional y seguro.</p>
         
         <!-- Sección de Promoción -->
-        <div class="promo-box p-4 mt-4 border border-accent rounded-3 bg-dark text-light border-secondary shadow-sm">
+        <div class="promo-box p-4 mt-4 border border-accent rounded-3 bg-dark text-light border-secondary shadow-sm reveal-scale">
           <h3 class="text-light mb-3"><i class="bi bi-stars text-accent me-2"></i>¡Promoción Especial! Incluye Domicilios. <i class="bi bi-stars text-accent me-2"></i></h3>
           <div class="row g-3">
             <div class="col-md-6">
@@ -131,8 +136,8 @@
             </div>
           </div>
           <div class="mt-4">
-            <a href="reservarCita.html" class="btn btn-accent btn-lg px-5 fw-bold text-uppercase">
-              <i class="bi bi-calendar-event me-2"></i>Agenda por tiempo limitado
+            <a href="reservarCita.html" class="btn btn-accent btn-lg px-5 fw-bold text-uppercase btn-pulse">
+              <i class="bi bi-calendar-event me-2"></i>Asegura tu Tatuaje en Promoción
             </a>
           </div>
           <p class="small text-danger mt-2 mb-0">*Válido hasta agotar agenda del mes</p>
@@ -141,98 +146,131 @@
     </div>
   </section>
 
+  <!-- SECCIÓN GALERÍA DE TRABAJOS RECIENTES -->
   <div class="album py-5 bg-dark text-light border-secondary">
     <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="badge-live-agenda mb-2">Galería de Piezas</span>
+        <h2 class="fw-bold text-white">Nuestros Trabajos Más Recientes</h2>
+        <p class="text-muted">Explora cada estilo y agenda tu diseño personalizado en un clic.</p>
+      </div>
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <!-- 1. Rosa Tradicional -->
+        <div class="col reveal delay-100">
           <div class="card shadow-sm">
-            <img src="src/images/tattoo_rosa_1774786799403.png" class="card-img-top" alt="Tatuaje Rosa Tradicional">
+            <div class="card-img-wrapper">
+              <span class="card-style-badge">Tradicional</span>
+              <img src="src/images/tattoo_rosa_1774786799403.png" class="card-img-top" alt="Tatuaje Rosa Tradicional">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Rosa Tradicional</h5>
               <p class="card-text">Líneas sólidas y colores vibrantes. Un clásico que nunca pasa de moda. Técnica americana pura.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-detail">Ver Detalle</button>
-                </div>
-                <small class="text-muted">Estilo: Tradicional</small>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 gap-2">
+                <button type="button" class="btn btn-detail">Ver Detalle</button>
+                <a href="reservarCita.html?estilo=tradicional" class="btn btn-card-book">
+                  <i class="bi bi-calendar2-check"></i> Quiero uno así
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
+
+        <!-- 2. Dragón Oriental -->
+        <div class="col reveal delay-200">
           <div class="card shadow-sm">
-            <img src="src/images/tattoo_dragon_1774786814796.png" class="card-img-top" alt="Dragón Japonés">
+            <div class="card-img-wrapper">
+              <span class="card-style-badge">Japonés</span>
+              <img src="src/images/tattoo_dragon_1774786814796.png" class="card-img-top" alt="Dragón Japonés">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Dragón Oriental</h5>
               <p class="card-text">Composición de espalda completa. Estilo Irezumi con flujo natural siguiendo la musculatura.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-detail">Ver Detalle</button>
-                </div>
-                <small class="text-muted">Estilo: Japonés</small>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 gap-2">
+                <button type="button" class="btn btn-detail">Ver Detalle</button>
+                <a href="reservarCita.html?estilo=otro" class="btn btn-card-book">
+                  <i class="bi bi-calendar2-check"></i> Quiero uno así
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col">
+        <!-- 3. Blackwork Sombrío -->
+        <div class="col reveal delay-300">
           <div class="card shadow-sm">
-            <img src="src/images/tattoo_blackwork_1774786830459.png" class="card-img-top" alt="Blackwork Sombrío">
+            <div class="card-img-wrapper">
+              <span class="card-style-badge">Blackwork</span>
+              <img src="src/images/tattoo_blackwork_1774786830459.png" class="card-img-top" alt="Blackwork Sombrío">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Blackwork Sombrío</h5>
               <p class="card-text">Contrastes profundos y texturas detalladas. Una pieza única diseñada a medida para resaltar el carácter y la profundidad.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-detail">Ver Detalle</button>
-                </div>
-                <small class="text-muted">Estilo: Blackwork</small>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 gap-2">
+                <button type="button" class="btn btn-detail">Ver Detalle</button>
+                <a href="reservarCita.html?estilo=blackwork" class="btn btn-card-book">
+                  <i class="bi bi-calendar2-check"></i> Quiero uno así
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col">
+        <!-- 4. Búho Místico -->
+        <div class="col reveal delay-100">
           <div class="card shadow-sm">
-            <img src="src/images/tattoo_neotradicional_1774786847650.png" class="card-img-top" alt="Búho Neotradicional">
+            <div class="card-img-wrapper">
+              <span class="card-style-badge">Neotradicional</span>
+              <img src="src/images/tattoo_neotradicional_1774786847650.png" class="card-img-top" alt="Búho Neotradicional">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Búho Místico</h5>
               <p class="card-text">Mezcla de líneas modernas con sombreados clásicos. Detalles en joyas y ojos dorados.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-detail">Ver Detalle</button>
-                </div>
-                <small class="text-muted">Estilo: Neotradicional</small>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 gap-2">
+                <button type="button" class="btn btn-detail">Ver Detalle</button>
+                <a href="reservarCita.html?estilo=neotradicional" class="btn btn-card-book">
+                  <i class="bi bi-calendar2-check"></i> Quiero uno así
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
+
+        <!-- 5. Geometría Sagrada -->
+        <div class="col reveal delay-200">
           <div class="card shadow-sm">
-            <img src="src/images/tattoo_minimalista_1774786878994.png" class="card-img-top" alt="Geometría Minimalista">
+            <div class="card-img-wrapper">
+              <span class="card-style-badge">Minimalista</span>
+              <img src="src/images/tattoo_minimalista_1774786878994.png" class="card-img-top" alt="Geometría Minimalista">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Geometría Sagrada</h5>
               <p class="card-text">Precisión matemática y líneas finas. Simbolismo profundo cargado de significado espiritual.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-detail">Ver Detalle</button>
-                </div>
-                <small class="text-muted">Estilo: Minimalista</small>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 gap-2">
+                <button type="button" class="btn btn-detail">Ver Detalle</button>
+                <a href="reservarCita.html?estilo=minimalista" class="btn btn-card-book">
+                  <i class="bi bi-calendar2-check"></i> Quiero uno así
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
+
+        <!-- 6. Tribales y Polinesios -->
+        <div class="col reveal delay-300">
           <div class="card shadow-sm">
-            <img src="src/images/tattoo_tribal_1774786893163.png" class="card-img-top" alt="Tatuaje Tribal">
+            <div class="card-img-wrapper">
+              <span class="card-style-badge">Tribal</span>
+              <img src="src/images/tattoo_tribal_1774786893163.png" class="card-img-top" alt="Tatuaje Tribal">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Tribales y Polinesios</h5>
-              <p class="card-text">Diseños ancestrales con negros sólidos y patrones geométricos potentes. Especialista en composiciones que se adaptan a la anatomía, evocando fuerza y tradición.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-detail">Ver Detalle</button>
-                </div>
-                <small class="text-muted">Estilo: Tribal</small>
+              <p class="card-text">Diseños ancestrales con negros sólidos y patrones geométricos potentes adaptados a la anatomía.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-2 gap-2">
+                <button type="button" class="btn btn-detail">Ver Detalle</button>
+                <a href="reservarCita.html?estilo=otro" class="btn btn-card-book">
+                  <i class="bi bi-calendar2-check"></i> Quiero uno así
+                </a>
               </div>
             </div>
           </div>
@@ -240,6 +278,112 @@
       </div>
     </div>
   </div>
+
+  <!-- BANNER MID-PAGE: ¿TIENES UNA IDEA EN MENTE? -->
+  <section class="container my-5 reveal">
+    <div class="cta-banner-section">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7 text-center text-lg-start">
+          <span class="badge-live-agenda">
+            <span class="live-dot"></span> Asesoría &amp; Diseño Personalizado
+          </span>
+          <h2 class="h1 fw-bold text-white mb-3">¿Tienes una idea en mente? Convirtámosla en arte eterno</h2>
+          <p class="text-muted lead mb-4">
+            Cuéntanos tu concepto, zona del cuerpo o referencias visuales. Diseñamos bocetos a medida sin compromiso para que lleves una pieza única que hable de ti.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+            <a href="reservarCita.html" class="btn btn-hero-gold px-4 py-2 text-nowrap btn-pulse">
+              <i class="bi bi-pencil-square me-2"></i>Cotizar mi Diseño
+            </a>
+            <a href="https://wa.me/13179125909?text=Hola%20Gregorio%2C%20tengo%20una%20idea%20para%20un%20tatuaje%20y%20quiero%20cotizarlo" target="_blank" class="btn btn-hero-whatsapp px-4 py-2 text-nowrap">
+              <i class="bi bi-whatsapp me-2"></i>Escribir por WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="row g-3">
+            <div class="col-12 col-sm-6 col-lg-12">
+              <div class="feature-pill-box">
+                <div class="feature-pill-icon"><i class="bi bi-shield-check"></i></div>
+                <h6 class="text-white fw-bold mb-1">Higiene &amp; Bioseguridad</h6>
+                <p class="small text-muted mb-0">Material 100% desechable, agujas de grado médico y espacio esterilizado.</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-12">
+              <div class="feature-pill-box">
+                <div class="feature-pill-icon"><i class="bi bi-house-door"></i></div>
+                <h6 class="text-white fw-bold mb-1">En Estudio o Domicilio</h6>
+                <p class="small text-muted mb-0">Atención profesional en Burgos y opción cómoda de traslado a tu domicilio.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE RECOMENDACIONES DE GOOGLE (GOOGLE REVIEWS) -->
+  <section class="google-reviews-section container my-5 reveal" id="opiniones">
+    <!-- Header de Calificación Google -->
+    <div class="google-badge-header">
+      <div class="google-brand-title">
+        <!-- SVG oficial de Google -->
+        <svg class="google-logo-svg" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.55 10.78l7.98-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        <div>
+          <h3 class="h5 fw-bold text-white mb-0">Reseñas en Google</h3>
+          <small class="text-muted">Opiniones reales de clientes verificados</small>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <div class="google-score-big">5.0</div>
+        <div>
+          <div class="star-rating">★★★★★</div>
+          <small class="text-muted">Basado en <strong>48 opiniones</strong> en Google</small>
+        </div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-google-action">
+          <i class="bi bi-box-arrow-up-right"></i> Ver en Google Maps
+        </a>
+        <a href="reservarCita.html" class="btn btn-accent btn-sm px-3 fw-bold">
+          <i class="bi bi-chat-heart me-1"></i> Vivir la experiencia
+        </a>
+      </div>
+    </div>
+
+    <!-- Grid de Reseñas dinámicas (listo para conectar a Google Places API / Backend) -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="google-reviews-grid" data-google-place-id="ChIJN1t_tDeuEmsRUsoyG83frY4" data-rating="5.0" data-reviews-count="48">
+      <!-- Se inyecta dinámicamente desde main.js con soporte offline/online -->
+    </div>
+  </section>
+
+  <!-- SECCIÓN FINAL DE CIERRE (MEGA CTA ANTES DEL FOOTER) -->
+  <section class="container my-5 reveal-scale">
+    <div class="final-cta-section">
+      <span class="badge-live-agenda">
+        <span class="live-dot"></span> Plazas limitadas para este mes
+      </span>
+      <h2 class="final-cta-title">¿Listo para llevar tu próxima pieza en la piel?</h2>
+      <p class="final-cta-subtitle">
+        Ya sea tu primer tatuaje o una composición grande, garantizamos un trato cercano, máxima higiene y una obra que llevarás con orgullo toda la vida.
+      </p>
+      <div class="final-cta-buttons">
+        <a href="reservarCita.html" class="btn btn-hero-gold btn-lg px-5 py-3 fw-bold text-nowrap btn-pulse">
+          <i class="bi bi-calendar-check me-2"></i>Reservar Cita Ahora
+        </a>
+        <a href="https://wa.me/13179125909?text=Hola%20Gregorio%2C%20quiero%20agendar%20una%20cita%20para%20un%20tatuaje" target="_blank" class="btn btn-hero-whatsapp btn-lg px-5 py-3 fw-bold text-nowrap">
+          <i class="bi bi-whatsapp me-2"></i>Escribir a WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
 
   <div id="app"></div>
 </main>
@@ -262,13 +406,17 @@
 </footer>
 
     <div class="floating-helper shadow-lg hidden" id="whatsappHelper">
-      <p class="mb-2"><strong>¿Necesitas ayuda?</strong><br>Si quieres un presupuesto personalizado o tienes dudas, escríbeme.</p>
-      <a href="https://wa.me/13179125909" target="_blank" class="btn-whatsapp-float">
-        <i class="bi bi-whatsapp"></i> 
-        <span class="d-none d-sm-inline">Consultar por WhatsApp</span>
-        <span class="d-inline d-sm-none">Agenda ahora</span>
-      </a>
-
+      <p class="mb-2"><strong>¿Pensando en tu próximo tatuaje?</strong><br>Pregúntame sin compromiso sobre diseños, presupuestos o fechas.</p>
+      <div class="d-flex flex-column gap-2">
+        <a href="https://wa.me/13179125909?text=Hola%20Gregorio%2C%20me%20gustar%C3%ADa%20consultar%20por%20un%20tatuaje" target="_blank" class="btn-whatsapp-float">
+          <i class="bi bi-whatsapp"></i> 
+          <span class="d-none d-sm-inline">Consultar por WhatsApp</span>
+          <span class="d-inline d-sm-none">WhatsApp Rápido</span>
+        </a>
+        <a href="reservarCita.html" class="btn btn-accent btn-sm fw-bold text-uppercase py-2 d-none d-sm-block">
+          <i class="bi bi-calendar2-event me-1"></i> Agendar Cita Online
+        </a>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

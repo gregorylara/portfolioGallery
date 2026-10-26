@@ -792,3 +792,474 @@
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 180, 0, 0.4);
 }
+
+/* ====================================================================
+ * ANIMACIONES SCROLL REVEAL & MICRO-INTERACCIONES
+ * ==================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Animación de Pulso / Glow para CTAs clave */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 180, 0, 0.4), 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px 6px rgba(0, 180, 0, 0.65), 0 8px 25px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.btn-pulse {
+  animation: pulseGlow 2.4s infinite ease-in-out;
+}
+
+/* Shimmer de luz en botones destacados */
+@keyframes btnShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.btn-shimmer {
+  background: linear-gradient(90deg, #00b400 0%, #25d366 35%, #ffffff 50%, #25d366 65%, #00b400 100%);
+  background-size: 200% auto;
+  color: #0d1117 !important;
+  font-weight: 800 !important;
+  animation: btnShimmer 4s infinite linear;
+  border: none !important;
+}
+
+/* Badge flotante de urgencia / disponibilidad */
+.badge-live-agenda {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 180, 0, 0.12);
+  border: 1px solid rgba(0, 180, 0, 0.45);
+  color: #00ff66;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.badge-live-agenda .live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00ff66;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff66;
+  animation: liveBlink 1.5s infinite;
+}
+
+@keyframes liveBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* ====================================================================
+ * MEJORAS EN TARJETAS DE GALERÍA Y CTAs
+ * ==================================================================== */
+
+.card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 180, 0, 0.45) !important;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 180, 0, 0.25) !important;
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 235px;
+}
+
+.card-img-wrapper .card-img-top {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.06);
+}
+
+/* Badge de estilo sobre la foto */
+.card-style-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e6edf3;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón "Quiero uno así" en la tarjeta */
+.btn-card-book {
+  background: linear-gradient(135deg, rgba(0, 180, 0, 0.15) 0%, rgba(37, 211, 102, 0.25) 100%);
+  color: #00ff66 !important;
+  border: 1px solid rgba(0, 180, 0, 0.5) !important;
+  padding: 0.45rem 0.85rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 6px !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.25s ease;
+}
+
+.btn-card-book:hover {
+  background: #00b400 !important;
+  color: #0d1117 !important;
+  border-color: #00b400 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 180, 0, 0.4);
+}
+
+/* ====================================================================
+ * BANNER MID-PAGE: ¿TIENES UNA IDEA EN MENTE?
+ * ==================================================================== */
+
+.cta-banner-section {
+  background: radial-gradient(circle at center, rgba(22, 27, 34, 0.95) 0%, rgba(13, 17, 23, 0.98) 100%);
+  border: 1px solid rgba(0, 180, 0, 0.3);
+  border-radius: 16px;
+  padding: 50px 30px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(0, 180, 0, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.feature-pill-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-pill-box:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 180, 0, 0.4);
+  transform: translateY(-4px);
+}
+
+.feature-pill-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 180, 0, 0.12);
+  color: #00ff66;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+/* ====================================================================
+ * SECCIÓN DE RECOMENDACIONES DE GOOGLE (GOOGLE REVIEWS)
+ * ==================================================================== */
+
+.google-reviews-section {
+  padding: 60px 0;
+  position: relative;
+}
+
+.google-badge-header {
+  background: rgba(22, 27, 34, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.google-brand-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.google-logo-svg {
+  width: 32px;
+  height: 32px;
+}
+
+.google-score-big {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.star-rating {
+  color: #FBBC05;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+}
+
+.review-card {
+  background-color: #161b22;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(251, 188, 5, 0.35);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(251, 188, 5, 0.12);
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4285F4, #34A853);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.review-avatar.avatar-red {
+  background: linear-gradient(135deg, #EA4335, #FBBC05);
+}
+
+.review-avatar.avatar-green {
+  background: linear-gradient(135deg, #34A853, #4285F4);
+}
+
+.review-avatar.avatar-yellow {
+  background: linear-gradient(135deg, #FBBC05, #EA4335);
+}
+
+.review-author-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: #e6edf3;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.review-meta {
+  font-size: 0.78rem;
+  color: #8b949e;
+}
+
+.review-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: #4285F4;
+  font-weight: 600;
+}
+
+.review-body {
+  font-size: 0.88rem;
+  color: #c9d1d9;
+  line-height: 1.5;
+  margin: 12px 0;
+  flex-grow: 1;
+}
+
+.review-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #8b949e;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+/* Botón Google Action */
+.btn-google-action {
+  background-color: transparent;
+  color: #e6edf3;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-google-action:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #FBBC05;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ====================================================================
+ * SECCIÓN FINAL DE CIERRE (MEGA CTA ANTES DEL FOOTER)
+ * ==================================================================== */
+
+.final-cta-section {
+  background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+  border: 2px solid #00b400;
+  border-radius: 20px;
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 180, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.final-cta-subtitle {
+  font-size: 1.05rem;
+  color: #c9d1d9;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+}
+
+.final-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .final-cta-title {
+    font-size: 1.6rem;
+  }
+  .final-cta-section {
+    padding: 35px 20px;
+  }
+  .google-badge-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
