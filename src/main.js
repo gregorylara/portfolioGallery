@@ -191,8 +191,10 @@ function initGoogleReviewsSection() {
     }
   ];
 
-  // Renderizar las tarjetas de reseña en el grid
-  renderReviews(container, mockReviews);
+  // Si el contenedor no tiene tarjetas placeholder en el HTML, renderizar datos de ejemplo
+  if (container.children.length === 0) {
+    renderReviews(container, mockReviews);
+  }
 
   /**
    * Conexión preparada para backend:
@@ -208,7 +210,7 @@ function initGoogleReviewsSection() {
         }
       })
       .catch(err => {
-        console.warn('Google Reviews API offline, usando datos locales:', err);
+        console.warn('Google Reviews API offline, usando placeholders de HTML:', err);
       });
   }
 }

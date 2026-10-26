@@ -28,10 +28,12 @@
           <p class="text-muted">¡Hola! Soy Gregorio, un apasionado del arte corporal con base en Burgos. Mi objetivo es transformar tus ideas y emociones en piezas únicas grabadas en la piel. Especializado en diversos estilos, desde la precisión del realismo hasta la fuerza de los tribales, garantizo un proceso profesional, seguro y totalmente personalizado para cada cliente.</p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
+          <h4 class="text-white">Contacto</h4>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Instagram</a></li>
-            <li><a href="https://wa.me/13179125909" class="text-white">Whatsapp</a></li>
+            <li class="mb-2"><a href="https://wa.me/34607038130" target="_blank" class="text-white text-decoration-none"><i class="bi bi-whatsapp text-success me-2"></i>+34 607 038 130</a></li>
+            <li class="mb-2"><a href="tel:+34607038130" class="text-white text-decoration-none"><i class="bi bi-telephone text-primary me-2"></i>Llamar a GC Design</a></li>
+            <li class="mb-2"><a href="https://gcdesignstudio.es/html/contacto.html" target="_blank" class="text-white text-decoration-none"><i class="bi bi-envelope text-warning me-2"></i>Contacto GC Design</a></li>
+            <li class="mb-2"><a href="https://www.instagram.com/gcdesignstudioagency/" target="_blank" class="text-white text-decoration-none"><i class="bi bi-instagram text-danger me-2"></i>Instagram</a></li>
           </ul>
         </div>
       </div>
@@ -94,7 +96,7 @@
         <a href="reservarCita.html" class="btn btn-hero-gold px-4 py-2 text-nowrap btn-pulse">
           <i class="bi bi-calendar-event me-2"></i>Reservar Cita
         </a>
-        <a href="https://wa.me/13179125909?text=Hola%20Gregorio%2C%20quiero%20consultar%20por%20un%20tatuaje" target="_blank" class="btn btn-hero-whatsapp px-4 py-2 text-nowrap">
+        <a href="https://wa.me/34607038130?text=Hola%2C%20quiero%20consultar%20por%20un%20tatuaje" target="_blank" class="btn btn-hero-whatsapp px-4 py-2 text-nowrap">
           <i class="bi bi-whatsapp me-2"></i>WhatsApp Directo
         </a>
       </div>
@@ -286,7 +288,7 @@
             <a href="reservarCita.html" class="btn btn-hero-gold px-4 py-2 text-nowrap btn-pulse">
               <i class="bi bi-pencil-square me-2"></i>Cotizar mi Diseño
             </a>
-            <a href="https://wa.me/13179125909?text=Hola%20Gregorio%2C%20tengo%20una%20idea%20para%20un%20tatuaje%20y%20quiero%20cotizarlo" target="_blank" class="btn btn-hero-whatsapp px-4 py-2 text-nowrap">
+            <a href="https://wa.me/34607038130?text=Hola%2C%20tengo%20una%20idea%20para%20un%20tatuaje%20y%20quiero%20cotizarlo" target="_blank" class="btn btn-hero-whatsapp px-4 py-2 text-nowrap">
               <i class="bi bi-whatsapp me-2"></i>Escribir por WhatsApp
             </a>
           </div>
@@ -349,9 +351,171 @@
       </div>
     </div>
 
-    <!-- Grid de Reseñas dinámicas (listo para conectar a Google Places API / Backend) -->
+    <!-- Grid de Reseñas (Placeholders estables que se sustituyen al conectar API de Google) -->
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="google-reviews-grid" data-google-place-id="ChIJN1t_tDeuEmsRUsoyG83frY4" data-rating="5.0" data-reviews-count="48">
-      <!-- Se inyecta dinámicamente desde main.js con soporte offline/online -->
+      
+      <!-- Placeholder Review 1 -->
+      <div class="col reveal delay-100">
+        <div class="review-card">
+          <div>
+            <div class="review-author">
+              <div class="review-avatar avatar-blue">M</div>
+              <div>
+                <div class="review-author-name">
+                  Marcos Del Valle
+                  <i class="bi bi-patch-check-fill text-primary" title="Reseña verificada de Google"></i>
+                </div>
+                <div class="review-meta d-flex align-items-center gap-2">
+                  <span class="star-rating">★★★★★</span>
+                  <span>·</span>
+                  <span>Hace 1 semana</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-body">"Increíble experiencia. Gregorio me hizo una pieza de realismo en el antebrazo y superó totalmente mis expectativas. El trato, la higiene del material y la precisión en el sombreado son de 10."</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25 mt-3">
+            <span class="review-tag">Estilo: Realismo Sombrío</span>
+            <span class="review-verified-badge"><i class="bi bi-google"></i> Google</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder Review 2 -->
+      <div class="col reveal delay-200">
+        <div class="review-card">
+          <div>
+            <div class="review-author">
+              <div class="review-avatar avatar-red">L</div>
+              <div>
+                <div class="review-author-name">
+                  Lucía Santamaría
+                  <i class="bi bi-patch-check-fill text-primary" title="Reseña verificada de Google"></i>
+                </div>
+                <div class="review-meta d-flex align-items-center gap-2">
+                  <span class="star-rating">★★★★★</span>
+                  <span>·</span>
+                  <span>Hace 2 semanas</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-body">"Me hice un diseño minimalista de línea fina con la promoción de 2x40€. Muy delicado, cero dolor innecesario y sanó perfecto con las indicaciones que me dio. ¡Volveré seguro!"</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25 mt-3">
+            <span class="review-tag">Estilo: Minimalista Fine Line</span>
+            <span class="review-verified-badge"><i class="bi bi-google"></i> Google</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder Review 3 -->
+      <div class="col reveal delay-300">
+        <div class="review-card">
+          <div>
+            <div class="review-author">
+              <div class="review-avatar avatar-yellow">D</div>
+              <div>
+                <div class="review-author-name">
+                  David H. Gómez
+                  <i class="bi bi-patch-check-fill text-primary" title="Reseña verificada de Google"></i>
+                </div>
+                <div class="review-meta d-flex align-items-center gap-2">
+                  <span class="star-rating">★★★★★</span>
+                  <span>·</span>
+                  <span>Hace 3 semanas</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-body">"Tenía un tatuaje antiguo que quería tapar con un cover-up oriental. Me diseñó un dragón que cubrió todo perfectamente sin dejar rastro de lo anterior. Un artista con mayúsculas en Burgos."</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25 mt-3">
+            <span class="review-tag">Estilo: Dragón Cover-Up</span>
+            <span class="review-verified-badge"><i class="bi bi-google"></i> Google</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder Review 4 -->
+      <div class="col reveal delay-100">
+        <div class="review-card">
+          <div>
+            <div class="review-author">
+              <div class="review-avatar avatar-green">E</div>
+              <div>
+                <div class="review-author-name">
+                  Elena Morales
+                  <i class="bi bi-patch-check-fill text-primary" title="Reseña verificada de Google"></i>
+                </div>
+                <div class="review-meta d-flex align-items-center gap-2">
+                  <span class="star-rating">★★★★★</span>
+                  <span>·</span>
+                  <span>Hace 1 mes</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-body">"Puntualidad, máxima higiene y una paciencia enorme para ajustar el boceto hasta que quedó exactamente como lo soñaba. Muy recomendado si buscas calidad y confianza."</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25 mt-3">
+            <span class="review-tag">Estilo: Neotradicional</span>
+            <span class="review-verified-badge"><i class="bi bi-google"></i> Google</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder Review 5 -->
+      <div class="col reveal delay-200">
+        <div class="review-card">
+          <div>
+            <div class="review-author">
+              <div class="review-avatar avatar-blue">A</div>
+              <div>
+                <div class="review-author-name">
+                  Adrián Cuesta
+                  <i class="bi bi-patch-check-fill text-primary" title="Reseña verificada de Google"></i>
+                </div>
+                <div class="review-meta d-flex align-items-center gap-2">
+                  <span class="star-rating">★★★★★</span>
+                  <span>·</span>
+                  <span>Hace 1 mes</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-body">"Pieza tribal en el hombro con un negro súper sólido y líneas impecables. Además el servicio a domicilio fue súper cómodo y profesional."</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25 mt-3">
+            <span class="review-tag">Estilo: Polinesio Tribal</span>
+            <span class="review-verified-badge"><i class="bi bi-google"></i> Google</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder Review 6 -->
+      <div class="col reveal delay-300">
+        <div class="review-card">
+          <div>
+            <div class="review-author">
+              <div class="review-avatar avatar-red">S</div>
+              <div>
+                <div class="review-author-name">
+                  Sara Villalba
+                  <i class="bi bi-patch-check-fill text-primary" title="Reseña verificada de Google"></i>
+                </div>
+                <div class="review-meta d-flex align-items-center gap-2">
+                  <span class="star-rating">★★★★★</span>
+                  <span>·</span>
+                  <span>Hace 2 meses</span>
+                </div>
+              </div>
+            </div>
+            <p class="review-body">"Mi primer tatuaje y no pude elegir mejor. Me explicó todo el proceso paso a paso y el kit de curación que me dio hizo que cicatrizara rapidísimo. 100% recomendado."</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25 mt-3">
+            <span class="review-tag">Estilo: Rosa Tradicional</span>
+            <span class="review-verified-badge"><i class="bi bi-google"></i> Google</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -366,7 +530,7 @@
         <a href="reservarCita.html" class="btn btn-hero-gold btn-lg px-5 py-3 fw-bold text-nowrap btn-pulse">
           <i class="bi bi-calendar-check me-2"></i>Reservar Cita Ahora
         </a>
-        <a href="https://wa.me/13179125909?text=Hola%20Gregorio%2C%20quiero%20agendar%20una%20cita%20para%20un%20tatuaje" target="_blank" class="btn btn-hero-whatsapp btn-lg px-5 py-3 fw-bold text-nowrap">
+        <a href="https://wa.me/34607038130?text=Hola%2C%20quiero%20agendar%20una%20cita%20para%20un%20tatuaje" target="_blank" class="btn btn-hero-whatsapp btn-lg px-5 py-3 fw-bold text-nowrap">
           <i class="bi bi-whatsapp me-2"></i>Escribir a WhatsApp
         </a>
       </div>
@@ -381,11 +545,12 @@
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
       <div class="mb-3 mb-md-0">
         <p class="mb-1 fw-bold">&copy; Gregorio Tattoo - 2024</p>
-        <p class="mb-0 small">¿Buscas algo personalizado? <a href="https://wa.me/13179125909" target="_blank" class="footer-link">Contáctanos directamente</a> <br class="d-block d-md-none">o reserva tu cita <a href="./reservarCita.html" class="footer-link">aquí</a>.</p>
+        <p class="mb-1 small">¿Buscas algo personalizado? <a href="https://wa.me/34607038130" target="_blank" class="footer-link"><i class="bi bi-whatsapp text-success me-1"></i>+34 607 038 130</a> o escríbenos a través de <a href="https://gcdesignstudio.es/html/contacto.html" target="_blank" class="footer-link">GC Design Contacto</a>.</p>
+        <p class="mb-0 small">También puedes reservar tu cita online <a href="./reservarCita.html" class="footer-link">aquí</a>.</p>
       </div>
       <div>
         <p class="mb-1">
-          <a href="https://gcdesignstudioagency.com" target="_blank" class="agency-link">Diseñado por gcdesignstudio</a>
+          <a href="https://gcdesignstudio.es" target="_blank" class="agency-link">Diseñado por gcdesignstudio</a>
         </p>
         <p class="mb-0 small"><a href="#" class="footer-link"><i class="bi bi-arrow-up-circle me-1"></i> Volver arriba</a></p>
       </div>
@@ -396,7 +561,7 @@
     <div class="floating-helper shadow-lg hidden" id="whatsappHelper">
       <p class="mb-2"><strong>¿Pensando en tu próximo tatuaje?</strong><br>Pregúntame sin compromiso sobre diseños, presupuestos o fechas.</p>
       <div class="d-flex flex-column gap-2">
-        <a href="https://wa.me/13179125909?text=Hola%20Gregorio%2C%20me%20gustar%C3%ADa%20consultar%20por%20un%20tatuaje" target="_blank" class="btn-whatsapp-float">
+        <a href="https://wa.me/34607038130?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20un%20tatuaje" target="_blank" class="btn-whatsapp-float">
           <i class="bi bi-whatsapp"></i> 
           <span class="d-none d-sm-inline">Consultar por WhatsApp</span>
           <span class="d-inline d-sm-none">WhatsApp Rápido</span>
